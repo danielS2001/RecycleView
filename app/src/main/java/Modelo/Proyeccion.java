@@ -1,9 +1,7 @@
 package Modelo;
 
 import android.database.Cursor;
-
 import com.example.recycleview.Alumno;
-
 import java.util.ArrayList;
 
 public interface Proyeccion {

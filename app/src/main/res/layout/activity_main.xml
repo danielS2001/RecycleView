@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -11,47 +11,52 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btnCerrar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Cerrar">
+            </Button>
+
+        </LinearLayout>
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Listado de alumnos"
             android:layout_gravity="center"
             android:textAlignment="center"
-            android:layout_marginBottom="20dp">
-        </TextView>
-
-        <Button
-            android:id="@+id/btnCerrar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Cerrar" />
+            android:layout_marginBottom="20dp"/>
 
         <androidx.coordinatorlayout.widget.CoordinatorLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content">
 
             <androidx.recyclerview.widget.RecyclerView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/recId">
-
-            </androidx.recyclerview.widget.RecyclerView>
+                android:id="@+id/recId"
+                />
 
             <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/agregarAlumno"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="bottom|end"
                 android:layout_margin="20dp"
                 android:backgroundTint="@color/cardview_light_background"
                 android:elevation="3dp"
-                app:borderWidth="2dp"
-                android:src="@drawable/agregar_alumno"
-                android:id="@+id/agregarAlumno">
-
-            </com.google.android.material.floatingactionbutton.FloatingActionButton>
+                android:src="@android:drawable/ic_input_add"
+                app:borderWidth="2dp" />
         </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
 
 
     </LinearLayout>
 
-</LinearLayout>
+</ScrollView>
